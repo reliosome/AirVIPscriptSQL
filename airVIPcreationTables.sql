@@ -32,3 +32,17 @@ CREATE TABLE [dbo].[Avion] (
     [capacite] INT         NOT NULL,
     CONSTRAINT [PK_Avion] PRIMARY KEY CLUSTERED ([avion_id] ASC)
 );
+
+-- ====================================================
+-- Création Table Client
+-- ====================================================
+
+CREATE TABLE [dbo].[Client] (
+    [Id_client]      INT IDENTITY (1, 1) NOT NULL,
+    [telephone]      INT NOT NULL,
+    [id_utilisateur] INT NOT NULL,
+    CONSTRAINT [PK_Client] PRIMARY KEY CLUSTERED ([Id_client] ASC),
+    CONSTRAINT [FK_Client_Utilisateur] FOREIGN KEY ([id_utilisateur]) REFERENCES [dbo].[Utilisateur] ([id_utilisateur])
+);
+
+
