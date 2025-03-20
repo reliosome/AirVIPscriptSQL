@@ -13,12 +13,14 @@ CREATE TABLE [dbo].[Aeroport] (
 -- Création Table Utilisateur
 -- ====================================================
 CREATE TABLE [dbo].[Utilisateur] (
-    [id_utilisateur] INT          IDENTITY (1, 1) NOT NULL,
-    [prenom]         VARCHAR (25) NOT NULL,
-    [nom]            VARCHAR (25) NOT NULL,
-    [mot_de_passe]   VARCHAR (25) NOT NULL,
+    [id_utilisateur]   INT          IDENTITY (1, 1) NOT NULL,
+    [adresse_courriel] VARCHAR (50) NOT NULL,
+    [prenom]           VARCHAR (25) NOT NULL,
+    [nom]              VARCHAR (25) NOT NULL,
+    [mot_de_passe]     VARCHAR (25) NOT NULL,
     CONSTRAINT [PK_Utilisateur] PRIMARY KEY CLUSTERED ([id_utilisateur] ASC)
 );
+
 -- ====================================================
 -- Création Table Avion
 -- ====================================================
